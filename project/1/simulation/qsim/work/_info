@@ -3,23 +3,43 @@ K3
 13
 cModel Technology
 Z0 dD:\data\shudian\pproject\1\simulation\qsim
-v\3_3 
+v\3_2 
 !i10b 1
-!s100 g6A8=Ao97Z14FzRRj?6bk3
-IQhXPCX<D7Ie2KE`_]B_7R3
-VTSTW[=iTN`6LDZ>G^L;[b3
-Z1 dD:\data\shudian\pproject\1\simulation\qsim
-w1714212205
-8add.vo
-Fadd.vo
+Z1 !s100 n6gCF=]o8a`QzkMZ[<gXl3
+Z2 Ikc^Ze<PS0O^^kh7I>_bID0
+Z3 VWPZbf6`=aK^PVU7fR`Uc`2
+Z4 dD:\HuaweiMoveData\Users\SJK\Desktop\1\simulation\qsim
+w1714883521
+Z5 8add.vo
+Z6 Fadd.vo
 L0 31
-OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1714212207.392000
+!s108 1714883521.636000
 !s107 add.vo|
-!s90 -work|work|add.vo|
+Z8 !s90 -work|work|add.vo|
 !s101 -O0
-o-work work -O0
-n@1343_3@040
+Z9 o-work work -O0
+Z10 n@1343_2@040
+v\3_3 
+Z11 IQhXPCX<D7Ie2KE`_]B_7R3
+Z12 VTSTW[=iTN`6LDZ>G^L;[b3
+Z13 dD:\data\shudian\pproject\1\simulation\qsim
+Z14 w1714212205
+R5
+R6
+L0 31
+R7
+r1
+31
+R9
+Z15 n@1343_3@040
+Z16 !s100 g6A8=Ao97Z14FzRRj?6bk3
+Z17 !s108 1714212207.392000
+Z18 !s107 add.vo|
+R8
+!i10b 1
+!s85 0
+!s101 -O0
