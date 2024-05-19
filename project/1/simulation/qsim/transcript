@@ -2,11 +2,28 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module \3_2 
+# -- Compiling module v5_1
 # 
 # Top level modules:
-# 	\3_2 
+# 	v5_1
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# ** Error: add.vt(29): near "32": syntax error, unexpected INTEGER NUMBER, expecting IDENTIFIER or automatic or TYPE_IDENTIFIER or static
-# ** Error: d:/altera/13.0/modelsim_ase/win32aloem/vlog failed.
-# Executing ONERROR command at macro ./add.do line 4
+# -- Compiling module v5_1_vlg_vec_tst
+# 
+# Top level modules:
+# 	v5_1_vlg_vec_tst
+# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.v5_1_vlg_vec_tst 
+# Loading work.v5_1_vlg_vec_tst
+# Loading work.v5_1
+# Loading cycloneiii_ver.cycloneiii_io_obuf
+# Loading cycloneiii_ver.cycloneiii_io_ibuf
+# Loading cycloneiii_ver.cycloneiii_clkctrl
+# Loading cycloneiii_ver.cycloneiii_mux41
+# Loading cycloneiii_ver.cycloneiii_ena_reg
+# Loading cycloneiii_ver.cycloneiii_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneiii_ver.cycloneiii_ram_block
+# Loading cycloneiii_ver.cycloneiii_ram_register
+# Loading cycloneiii_ver.cycloneiii_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Note: $finish    : add.vt(46)
+#    Time: 1 us  Iteration: 0  Instance: /v5_1_vlg_vec_tst

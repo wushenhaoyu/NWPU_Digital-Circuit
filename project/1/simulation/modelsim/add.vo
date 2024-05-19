@@ -16,10 +16,10 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.0 Build 156 04/24/2013 SJ Full Version"
 
-// DATE "05/05/2024 14:42:34"
+// DATE "05/19/2024 22:12:34"
 
 // 
-// Device: Altera 5CEBA4F23C7 Package FBGA484
+// Device: Altera EP3C5F256C6 Package FBGA256
 // 
 
 // 
@@ -28,36 +28,36 @@
 
 `timescale 1 ps/ 1 ps
 
-module \3_2  (
-	\0 ,
-	Clk,
-	stop,
+module \2_3  (
+	D,
+	a,
+	b,
+	bin,
 	\1 ,
 	\2 ,
-	\3 ,
+	\8 ,
 	\4 ,
-	\5 ,
-	\6 );
-output 	\0 ;
-input 	Clk;
-input 	stop;
-output 	\1 ;
-output 	\2 ;
-output 	\3 ;
-output 	\4 ;
-output 	\5 ;
-output 	\6 ;
+	Bout);
+output 	D;
+input 	a;
+input 	b;
+input 	bin;
+input 	\1 ;
+input 	\2 ;
+input 	\8 ;
+input 	\4 ;
+output 	Bout;
 
 // Design Ports Information
-// 0	=>  Location: PIN_U21,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// 1	=>  Location: PIN_V21,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// 2	=>  Location: PIN_W22,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// 3	=>  Location: PIN_W21,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// 4	=>  Location: PIN_Y22,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// 5	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// 6	=>  Location: PIN_AA22,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// stop	=>  Location: PIN_U13,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// Clk	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// D	=>  Location: PIN_J6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Bout	=>  Location: PIN_L3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// 1	=>  Location: PIN_J2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// 4	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// 8	=>  Location: PIN_K1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// 2	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// a	=>  Location: PIN_K2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// b	=>  Location: PIN_K6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bin	=>  Location: PIN_T7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -71,1945 +71,205 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1_sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~sumout ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT ;
-wire \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0_combout ;
-wire \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1_combout ;
-wire \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2_combout ;
-wire \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3_combout ;
-wire \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4_combout ;
-wire \inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ;
-wire \~GND~combout ;
-wire \Clk~input_o ;
-wire \Clk~inputCLKENA0_outclk ;
-wire \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder_combout ;
-wire \stop~input_o ;
-wire \inst2|sub|9~0_combout ;
-wire \inst2|sub|87~0_combout ;
-wire \inst2|sub|87~q ;
-wire \inst2|sub|99~0_combout ;
-wire \inst2|sub|99~q ;
-wire \inst2|sub|110~0_combout ;
-wire \inst2|sub|110~feeder_combout ;
-wire \inst2|sub|110~q ;
-wire \inst20~combout ;
-wire \inst2|sub|9~q ;
-wire \inst3|6~combout ;
-wire \inst3|5~combout ;
-wire \inst16~0_combout ;
-wire \inst3|86~0_combout ;
-wire \inst3|38~0_combout ;
-wire [25:0] \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
-
-
-// Location: FF_X24_Y1_N59
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25] (
-	.clk(\Clk~input_o ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder_combout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25] .power_up = "low";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N45
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N48
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1_sumout  = SUM(( GND ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1_sumout ),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1 .lut_mask = 64'h0000FFFF00000000;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N35
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N32
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N38
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N41
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[3] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [3]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[3] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[3] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N44
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[4] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [4]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[4] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[4] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N47
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[5] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [5]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[5] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[5] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N53
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[7] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [7]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[7] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[7] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N50
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[6] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [6]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[6] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[6] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N56
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[8] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [8]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[8] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[8] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y2_N59
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[9] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [9]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[9] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[9] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N2
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[10] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [10]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[10] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[10] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N4
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[11] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [11]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[11] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[11] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N10
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[13] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [13]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[13] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[13] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N7
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[12] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [12]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[12] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[12] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N31
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[20] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [20]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[20] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[20] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N34
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[21] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [21]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[21] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[21] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N38
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[22] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [22]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[22] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[22] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N40
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[23] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [23]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[23] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[23] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N44
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[24] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [24]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[24] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[24] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N13
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[14] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [14]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[14] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[14] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N16
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[15] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [15]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[15] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[15] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N19
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[16] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [16]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[16] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[16] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N22
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[17] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [17]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[17] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[17] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N28
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[19] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [19]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[19] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[19] .power_up = "low";
-// synopsys translate_on
-
-// Location: FF_X24_Y1_N25
-dffeas \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[18] (
-	.clk(\Clk~inputCLKENA0_outclk ),
-	.d(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~sumout ),
-	.asdata(\~GND~combout ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [18]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[18] .is_wysiwyg = "true";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[18] .power_up = "low";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N42
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [24] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [24] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [24]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita24 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N33
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N30
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0] ) + ( VCC ) + ( !VCC ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0] ) + ( VCC ) + ( !VCC ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0 .lut_mask = 64'h00000000000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita0 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N36
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N39
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [3] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [3] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [3]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N42
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [4] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [4] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [4]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N45
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [5] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [5] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [5]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N51
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [7] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [7] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [7]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N48
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [6] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [6] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [6]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita6 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N54
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [8] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [8] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [8]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N57
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [9] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [9] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [9]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N0
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [10] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [10] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [10]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N3
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [11] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [11] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [11]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N9
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [13] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [13] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [13]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N6
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [12] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [12] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [12]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita12 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N30
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [20] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [20] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [20]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N33
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [21] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [21] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [21]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita20~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N36
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [22] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [22] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [22]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita21~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N39
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [23] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [23] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [23]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita22~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita23 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N12
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [14] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [14] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [14]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N15
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [15] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [15] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [15]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N18
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [16] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [16] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [16]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N21
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [17] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [17] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [17]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N27
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [19] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [19] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [19]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita19 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N24
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~sumout  = SUM(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [18] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT  ))
-// \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT  = CARRY(( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [18] ) + ( GND ) + ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [18]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~sumout ),
-	.cout(\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT ),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18 .lut_mask = 64'h0000FFFF000000FF;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita18 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N24
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0_combout  = ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [5] & ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [3] & ( 
-// (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [6] & (!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [7] & \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [4])) ) ) )
-
-	.dataa(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [6]),
-	.datab(gnd),
-	.datac(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [7]),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [4]),
-	.datae(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [5]),
-	.dataf(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [3]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0 .lut_mask = 64'h0000000000000050;
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N18
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1_combout  = ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [13] & ( !\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [11] & ( 
-// (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [12] & (!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [10] & !\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [9])) ) ) )
-
-	.dataa(gnd),
-	.datab(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [12]),
-	.datac(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [10]),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [9]),
-	.datae(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [13]),
-	.dataf(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [11]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1 .lut_mask = 64'h0000300000000000;
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N54
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2_combout  = ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25] & ( (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [21] & 
-// (!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [24] & (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [22] & \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [23]))) ) )
-
-	.dataa(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [21]),
-	.datab(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [24]),
-	.datac(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [22]),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [23]),
-	.datae(gnd),
-	.dataf(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2 .lut_mask = 64'h0000000000040004;
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N6
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3_combout  = ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [17] & ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [15] & ( 
-// (!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [18] & (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [19] & !\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [16])) ) ) )
-
-	.dataa(gnd),
-	.datab(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [18]),
-	.datac(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [19]),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [16]),
-	.datae(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [17]),
-	.dataf(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [15]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3 .lut_mask = 64'h0000000000000C00;
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N12
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4 (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4_combout  = ( \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2_combout  & ( \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1_combout  & ( 
-// (!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [8] & (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [14] & (\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3_combout  & 
-// \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [20]))) ) ) )
-
-	.dataa(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [8]),
-	.datab(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [14]),
-	.datac(!\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~3_combout ),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [20]),
-	.datae(!\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~2_combout ),
-	.dataf(!\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~1_combout ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4 .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4 .lut_mask = 64'h0000000000000002;
-defparam \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N6
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|cout_actual (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|cout_actual~combout  = ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] & ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1_sumout  ) ) # ( 
-// !\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] & ( \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1_sumout  ) ) # ( \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] & ( 
-// !\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1_sumout  & ( (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] & (\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0] & 
-// (\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0_combout  & \inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4_combout ))) ) ) )
-
-	.dataa(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [1]),
-	.datab(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [0]),
-	.datac(!\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~0_combout ),
-	.datad(!\inst|LPM_COUNTER_component|auto_generated|cmpr1|aneb_result_wire[0]~4_combout ),
-	.datae(!\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [2]),
-	.dataf(!\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~1_sumout ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst|LPM_COUNTER_component|auto_generated|cout_actual~combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|cout_actual .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|cout_actual .lut_mask = 64'h00000001FFFFFFFF;
-defparam \inst|LPM_COUNTER_component|auto_generated|cout_actual .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y2_N0
-cyclonev_lcell_comb \~GND (
-// Equation(s):
-// \~GND~combout  = GND
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\~GND~combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \~GND .extended_lut = "off";
-defparam \~GND .lut_mask = 64'h0000000000000000;
-defparam \~GND .shared_arith = "off";
-// synopsys translate_on
-
-// Location: IOIBUF_X22_Y0_N1
-cyclonev_io_ibuf \Clk~input (
-	.i(Clk),
+wire \4~input_o ;
+wire \D~output_o ;
+wire \Bout~output_o ;
+wire \b~input_o ;
+wire \8~input_o ;
+wire \1~input_o ;
+wire \2~input_o ;
+wire \inst7~0_combout ;
+wire \a~input_o ;
+wire \bin~input_o ;
+wire \inst7~1_combout ;
+wire \inst8~0_combout ;
+wire \inst8~1_combout ;
+wire \inst8~2_combout ;
+
+
+// Location: IOIBUF_X0_Y10_N15
+cycloneiii_io_ibuf \4~input (
+	.i(\4 ),
 	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\Clk~input_o ));
+	.o(\4~input_o ));
 // synopsys translate_off
-defparam \Clk~input .bus_hold = "false";
-defparam \Clk~input .simulate_z_as = "z";
+defparam \4~input .bus_hold = "false";
+defparam \4~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: CLKCTRL_G5
-cyclonev_clkena \Clk~inputCLKENA0 (
-	.inclk(\Clk~input_o ),
-	.ena(vcc),
-	.outclk(\Clk~inputCLKENA0_outclk ),
-	.enaout());
-// synopsys translate_off
-defparam \Clk~inputCLKENA0 .clock_type = "global clock";
-defparam \Clk~inputCLKENA0 .disable_mode = "low";
-defparam \Clk~inputCLKENA0 .ena_register_mode = "always enabled";
-defparam \Clk~inputCLKENA0 .ena_register_power_up = "high";
-defparam \Clk~inputCLKENA0 .test_syn = "high";
-// synopsys translate_on
-
-// Location: LABCELL_X24_Y1_N57
-cyclonev_lcell_comb \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder (
-// Equation(s):
-// \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder_combout  = \inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~sumout 
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(!\inst|LPM_COUNTER_component|auto_generated|counter_comb_bita25~sumout ),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder .extended_lut = "off";
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder .lut_mask = 64'h0F0F0F0F0F0F0F0F;
-defparam \inst|LPM_COUNTER_component|auto_generated|counter_reg_bit[25]~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: IOOBUF_X52_Y0_N53
-cyclonev_io_obuf \0~output (
-	.i(gnd),
+// Location: IOOBUF_X0_Y10_N23
+cycloneiii_io_obuf \D~output (
+	.i(\inst7~1_combout ),
 	.oe(vcc),
-	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
-	.parallelterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\0 ),
+	.o(\D~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \0~output .bus_hold = "false";
-defparam \0~output .open_drain_output = "false";
-defparam \0~output .shift_series_termination_control = "false";
+defparam \D~output .bus_hold = "false";
+defparam \D~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X51_Y0_N36
-cyclonev_io_obuf \1~output (
-	.i(gnd),
+// Location: IOOBUF_X0_Y7_N2
+cycloneiii_io_obuf \Bout~output (
+	.i(\inst8~2_combout ),
 	.oe(vcc),
-	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
-	.parallelterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\1 ),
+	.o(\Bout~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \1~output .bus_hold = "false";
-defparam \1~output .open_drain_output = "false";
-defparam \1~output .shift_series_termination_control = "false";
+defparam \Bout~output .bus_hold = "false";
+defparam \Bout~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X48_Y0_N76
-cyclonev_io_obuf \2~output (
-	.i(\inst3|6~combout ),
-	.oe(vcc),
-	.dynamicterminationcontrol(gnd),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.parallelterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\2 ),
-	.obar());
-// synopsys translate_off
-defparam \2~output .bus_hold = "false";
-defparam \2~output .open_drain_output = "false";
-defparam \2~output .shift_series_termination_control = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X50_Y0_N36
-cyclonev_io_obuf \3~output (
-	.i(\inst3|5~combout ),
-	.oe(vcc),
-	.dynamicterminationcontrol(gnd),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.parallelterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\3 ),
-	.obar());
-// synopsys translate_off
-defparam \3~output .bus_hold = "false";
-defparam \3~output .open_drain_output = "false";
-defparam \3~output .shift_series_termination_control = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X48_Y0_N93
-cyclonev_io_obuf \4~output (
-	.i(\inst16~0_combout ),
-	.oe(vcc),
-	.dynamicterminationcontrol(gnd),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.parallelterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\4 ),
-	.obar());
-// synopsys translate_off
-defparam \4~output .bus_hold = "false";
-defparam \4~output .open_drain_output = "false";
-defparam \4~output .shift_series_termination_control = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X50_Y0_N53
-cyclonev_io_obuf \5~output (
-	.i(\inst3|86~0_combout ),
-	.oe(vcc),
-	.dynamicterminationcontrol(gnd),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.parallelterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\5 ),
-	.obar());
-// synopsys translate_off
-defparam \5~output .bus_hold = "false";
-defparam \5~output .open_drain_output = "false";
-defparam \5~output .shift_series_termination_control = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X46_Y0_N36
-cyclonev_io_obuf \6~output (
-	.i(!\inst3|38~0_combout ),
-	.oe(vcc),
-	.dynamicterminationcontrol(gnd),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.parallelterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\6 ),
-	.obar());
-// synopsys translate_off
-defparam \6~output .bus_hold = "false";
-defparam \6~output .open_drain_output = "false";
-defparam \6~output .shift_series_termination_control = "false";
-// synopsys translate_on
-
-// Location: IOIBUF_X33_Y0_N41
-cyclonev_io_ibuf \stop~input (
-	.i(stop),
+// Location: IOIBUF_X0_Y9_N1
+cycloneiii_io_ibuf \b~input (
+	.i(b),
 	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\stop~input_o ));
+	.o(\b~input_o ));
 // synopsys translate_off
-defparam \stop~input .bus_hold = "false";
-defparam \stop~input .simulate_z_as = "z";
+defparam \b~input .bus_hold = "false";
+defparam \b~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X25_Y1_N45
-cyclonev_lcell_comb \inst2|sub|9~0 (
-// Equation(s):
-// \inst2|sub|9~0_combout  = ( !\stop~input_o  & ( \inst2|sub|9~q  ) ) # ( \stop~input_o  & ( !\inst2|sub|9~q  ) )
+// Location: IOIBUF_X0_Y8_N8
+cycloneiii_io_ibuf \8~input (
+	.i(\8 ),
+	.ibar(gnd),
+	.o(\8~input_o ));
+// synopsys translate_off
+defparam \8~input .bus_hold = "false";
+defparam \8~input .simulate_z_as = "z";
+// synopsys translate_on
 
-	.dataa(gnd),
+// Location: IOIBUF_X0_Y10_N1
+cycloneiii_io_ibuf \1~input (
+	.i(\1 ),
+	.ibar(gnd),
+	.o(\1~input_o ));
+// synopsys translate_off
+defparam \1~input .bus_hold = "false";
+defparam \1~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y18_N22
+cycloneiii_io_ibuf \2~input (
+	.i(\2 ),
+	.ibar(gnd),
+	.o(\2~input_o ));
+// synopsys translate_off
+defparam \2~input .bus_hold = "false";
+defparam \2~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y9_N0
+cycloneiii_lcell_comb \inst7~0 (
+// Equation(s):
+// \inst7~0_combout  = (!\2~input_o  & ((\4~input_o  & (!\8~input_o  & \1~input_o )) # (!\4~input_o  & (\8~input_o  & !\1~input_o ))))
+
+	.dataa(\4~input_o ),
+	.datab(\8~input_o ),
+	.datac(\1~input_o ),
+	.datad(\2~input_o ),
+	.cin(gnd),
+	.combout(\inst7~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst7~0 .lut_mask = 16'h0024;
+defparam \inst7~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y8_N1
+cycloneiii_io_ibuf \a~input (
+	.i(a),
+	.ibar(gnd),
+	.o(\a~input_o ));
+// synopsys translate_off
+defparam \a~input .bus_hold = "false";
+defparam \a~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X13_Y0_N22
+cycloneiii_io_ibuf \bin~input (
+	.i(bin),
+	.ibar(gnd),
+	.o(\bin~input_o ));
+// synopsys translate_off
+defparam \bin~input .bus_hold = "false";
+defparam \bin~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y9_N2
+cycloneiii_lcell_comb \inst7~1 (
+// Equation(s):
+// \inst7~1_combout  = (\inst7~0_combout  & (\b~input_o  $ (\a~input_o  $ (\bin~input_o ))))
+
+	.dataa(\b~input_o ),
+	.datab(\inst7~0_combout ),
+	.datac(\a~input_o ),
+	.datad(\bin~input_o ),
+	.cin(gnd),
+	.combout(\inst7~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst7~1 .lut_mask = 16'h8448;
+defparam \inst7~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y9_N12
+cycloneiii_lcell_comb \inst8~0 (
+// Equation(s):
+// \inst8~0_combout  = (\2~input_o  & (!\4~input_o )) # (!\2~input_o  & ((\a~input_o )))
+
+	.dataa(\4~input_o ),
 	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(!\stop~input_o ),
-	.dataf(!\inst2|sub|9~q ),
-	.datag(gnd),
+	.datac(\a~input_o ),
+	.datad(\2~input_o ),
 	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst2|sub|9~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
+	.combout(\inst8~0_combout ),
+	.cout());
 // synopsys translate_off
-defparam \inst2|sub|9~0 .extended_lut = "off";
-defparam \inst2|sub|9~0 .lut_mask = 64'h0000FFFFFFFF0000;
-defparam \inst2|sub|9~0 .shared_arith = "off";
+defparam \inst8~0 .lut_mask = 16'h55F0;
+defparam \inst8~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LABCELL_X25_Y1_N24
-cyclonev_lcell_comb \inst2|sub|87~0 (
+// Location: LCCOMB_X1_Y9_N6
+cycloneiii_lcell_comb \inst8~1 (
 // Equation(s):
-// \inst2|sub|87~0_combout  = ( \inst2|sub|87~q  & ( \inst2|sub|9~q  & ( !\stop~input_o  ) ) ) # ( !\inst2|sub|87~q  & ( \inst2|sub|9~q  & ( \stop~input_o  ) ) ) # ( \inst2|sub|87~q  & ( !\inst2|sub|9~q  ) )
+// \inst8~1_combout  = (\4~input_o  & (!\8~input_o  & (\1~input_o  & \inst8~0_combout ))) # (!\4~input_o  & (\8~input_o  & (!\1~input_o  & !\inst8~0_combout )))
 
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(!\stop~input_o ),
-	.datad(gnd),
-	.datae(!\inst2|sub|87~q ),
-	.dataf(!\inst2|sub|9~q ),
-	.datag(gnd),
+	.dataa(\4~input_o ),
+	.datab(\8~input_o ),
+	.datac(\1~input_o ),
+	.datad(\inst8~0_combout ),
 	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst2|sub|87~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
+	.combout(\inst8~1_combout ),
+	.cout());
 // synopsys translate_off
-defparam \inst2|sub|87~0 .extended_lut = "off";
-defparam \inst2|sub|87~0 .lut_mask = 64'h0000FFFF0F0FF0F0;
-defparam \inst2|sub|87~0 .shared_arith = "off";
+defparam \inst8~1 .lut_mask = 16'h2004;
+defparam \inst8~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X25_Y1_N56
-dffeas \inst2|sub|87 (
-	.clk(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25]),
-	.d(gnd),
-	.asdata(\inst2|sub|87~0_combout ),
-	.clrn(!\inst20~combout ),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(vcc),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst2|sub|87~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst2|sub|87 .is_wysiwyg = "true";
-defparam \inst2|sub|87 .power_up = "low";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N0
-cyclonev_lcell_comb \inst2|sub|99~0 (
+// Location: LCCOMB_X1_Y9_N8
+cycloneiii_lcell_comb \inst8~2 (
 // Equation(s):
-// \inst2|sub|99~0_combout  = ( \inst2|sub|9~q  & ( !\inst2|sub|99~q  $ (((!\stop~input_o ) # (!\inst2|sub|87~q ))) ) ) # ( !\inst2|sub|9~q  & ( \inst2|sub|99~q  ) )
+// \inst8~2_combout  = (\inst8~1_combout  & (((\b~input_o ) # (\bin~input_o )))) # (!\inst8~1_combout  & (\inst7~0_combout  & (\b~input_o  & \bin~input_o )))
 
-	.dataa(gnd),
-	.datab(!\stop~input_o ),
-	.datac(!\inst2|sub|87~q ),
-	.datad(!\inst2|sub|99~q ),
-	.datae(gnd),
-	.dataf(!\inst2|sub|9~q ),
-	.datag(gnd),
+	.dataa(\inst8~1_combout ),
+	.datab(\inst7~0_combout ),
+	.datac(\b~input_o ),
+	.datad(\bin~input_o ),
 	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst2|sub|99~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
+	.combout(\inst8~2_combout ),
+	.cout());
 // synopsys translate_off
-defparam \inst2|sub|99~0 .extended_lut = "off";
-defparam \inst2|sub|99~0 .lut_mask = 64'h00FF00FF03FC03FC;
-defparam \inst2|sub|99~0 .shared_arith = "off";
+defparam \inst8~2 .lut_mask = 16'hEAA0;
+defparam \inst8~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X25_Y1_N38
-dffeas \inst2|sub|99 (
-	.clk(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25]),
-	.d(gnd),
-	.asdata(\inst2|sub|99~0_combout ),
-	.clrn(!\inst20~combout ),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(vcc),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst2|sub|99~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst2|sub|99 .is_wysiwyg = "true";
-defparam \inst2|sub|99 .power_up = "low";
-// synopsys translate_on
+assign D = \D~output_o ;
 
-// Location: LABCELL_X25_Y1_N18
-cyclonev_lcell_comb \inst2|sub|110~0 (
-// Equation(s):
-// \inst2|sub|110~0_combout  = ( \inst2|sub|99~q  & ( \inst2|sub|9~q  & ( !\inst2|sub|110~q  $ (((!\inst2|sub|87~q ) # (!\stop~input_o ))) ) ) ) # ( !\inst2|sub|99~q  & ( \inst2|sub|9~q  & ( \inst2|sub|110~q  ) ) ) # ( \inst2|sub|99~q  & ( !\inst2|sub|9~q  & 
-// ( \inst2|sub|110~q  ) ) ) # ( !\inst2|sub|99~q  & ( !\inst2|sub|9~q  & ( \inst2|sub|110~q  ) ) )
-
-	.dataa(!\inst2|sub|87~q ),
-	.datab(!\stop~input_o ),
-	.datac(!\inst2|sub|110~q ),
-	.datad(gnd),
-	.datae(!\inst2|sub|99~q ),
-	.dataf(!\inst2|sub|9~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst2|sub|110~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst2|sub|110~0 .extended_lut = "off";
-defparam \inst2|sub|110~0 .lut_mask = 64'h0F0F0F0F0F0F1E1E;
-defparam \inst2|sub|110~0 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N51
-cyclonev_lcell_comb \inst2|sub|110~feeder (
-// Equation(s):
-// \inst2|sub|110~feeder_combout  = ( \inst2|sub|110~0_combout  )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\inst2|sub|110~0_combout ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst2|sub|110~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst2|sub|110~feeder .extended_lut = "off";
-defparam \inst2|sub|110~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst2|sub|110~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X25_Y1_N53
-dffeas \inst2|sub|110 (
-	.clk(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25]),
-	.d(\inst2|sub|110~feeder_combout ),
-	.asdata(vcc),
-	.clrn(!\inst20~combout ),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst2|sub|110~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst2|sub|110 .is_wysiwyg = "true";
-defparam \inst2|sub|110 .power_up = "low";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N12
-cyclonev_lcell_comb inst20(
-// Equation(s):
-// \inst20~combout  = ( \inst2|sub|87~q  & ( \inst2|sub|9~q  & ( (!\inst2|sub|99~q  & \inst2|sub|110~q ) ) ) )
-
-	.dataa(!\inst2|sub|99~q ),
-	.datab(gnd),
-	.datac(!\inst2|sub|110~q ),
-	.datad(gnd),
-	.datae(!\inst2|sub|87~q ),
-	.dataf(!\inst2|sub|9~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst20~combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam inst20.extended_lut = "off";
-defparam inst20.lut_mask = 64'h0000000000000A0A;
-defparam inst20.shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X25_Y1_N35
-dffeas \inst2|sub|9 (
-	.clk(\inst|LPM_COUNTER_component|auto_generated|counter_reg_bit [25]),
-	.d(gnd),
-	.asdata(\inst2|sub|9~0_combout ),
-	.clrn(!\inst20~combout ),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(vcc),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst2|sub|9~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst2|sub|9 .is_wysiwyg = "true";
-defparam \inst2|sub|9 .power_up = "low";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N36
-cyclonev_lcell_comb \inst3|6 (
-// Equation(s):
-// \inst3|6~combout  = (!\inst2|sub|110~q  & (!\inst2|sub|9~q  $ (((!\inst2|sub|99~q ) # (\inst2|sub|87~q )))))
-
-	.dataa(!\inst2|sub|9~q ),
-	.datab(!\inst2|sub|87~q ),
-	.datac(!\inst2|sub|110~q ),
-	.datad(!\inst2|sub|99~q ),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst3|6~combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst3|6 .extended_lut = "off";
-defparam \inst3|6 .lut_mask = 64'h5090509050905090;
-defparam \inst3|6 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N54
-cyclonev_lcell_comb \inst3|5 (
-// Equation(s):
-// \inst3|5~combout  = ( !\inst2|sub|87~q  & ( \inst2|sub|9~q  & ( (\inst2|sub|110~q  & !\inst2|sub|99~q ) ) ) )
-
-	.dataa(gnd),
-	.datab(!\inst2|sub|110~q ),
-	.datac(gnd),
-	.datad(!\inst2|sub|99~q ),
-	.datae(!\inst2|sub|87~q ),
-	.dataf(!\inst2|sub|9~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst3|5~combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst3|5 .extended_lut = "off";
-defparam \inst3|5 .lut_mask = 64'h0000000033000000;
-defparam \inst3|5 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N39
-cyclonev_lcell_comb \inst16~0 (
-// Equation(s):
-// \inst16~0_combout  = (\inst2|sub|9~q  & (!\inst2|sub|87~q  & (!\inst2|sub|110~q  $ (!\inst2|sub|99~q ))))
-
-	.dataa(!\inst2|sub|9~q ),
-	.datab(!\inst2|sub|87~q ),
-	.datac(!\inst2|sub|110~q ),
-	.datad(!\inst2|sub|99~q ),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst16~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst16~0 .extended_lut = "off";
-defparam \inst16~0 .lut_mask = 64'h0440044004400440;
-defparam \inst16~0 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N30
-cyclonev_lcell_comb \inst3|86~0 (
-// Equation(s):
-// \inst3|86~0_combout  = ( \inst2|sub|99~q  & ( \inst2|sub|9~q  & ( !\inst2|sub|110~q  ) ) ) # ( !\inst2|sub|99~q  & ( \inst2|sub|9~q  & ( !\inst2|sub|110~q  ) ) ) # ( \inst2|sub|99~q  & ( !\inst2|sub|9~q  & ( (!\inst2|sub|87~q  & !\inst2|sub|110~q ) ) ) )
-
-	.dataa(gnd),
-	.datab(!\inst2|sub|87~q ),
-	.datac(!\inst2|sub|110~q ),
-	.datad(gnd),
-	.datae(!\inst2|sub|99~q ),
-	.dataf(!\inst2|sub|9~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst3|86~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst3|86~0 .extended_lut = "off";
-defparam \inst3|86~0 .lut_mask = 64'h0000C0C0F0F0F0F0;
-defparam \inst3|86~0 .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X25_Y1_N3
-cyclonev_lcell_comb \inst3|38~0 (
-// Equation(s):
-// \inst3|38~0_combout  = ( \inst2|sub|87~q  & ( (!\inst2|sub|9~q  & (\inst2|sub|110~q  & !\inst2|sub|99~q )) # (\inst2|sub|9~q  & (!\inst2|sub|110~q )) ) ) # ( !\inst2|sub|87~q  & ( (!\inst2|sub|99~q  & (\inst2|sub|9~q )) # (\inst2|sub|99~q  & 
-// ((!\inst2|sub|110~q ))) ) )
-
-	.dataa(!\inst2|sub|9~q ),
-	.datab(gnd),
-	.datac(!\inst2|sub|110~q ),
-	.datad(!\inst2|sub|99~q ),
-	.datae(gnd),
-	.dataf(!\inst2|sub|87~q ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst3|38~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst3|38~0 .extended_lut = "off";
-defparam \inst3|38~0 .lut_mask = 64'h55F055F05A505A50;
-defparam \inst3|38~0 .shared_arith = "off";
-// synopsys translate_on
+assign Bout = \Bout~output_o ;
 
 endmodule
